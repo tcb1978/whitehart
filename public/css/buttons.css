@@ -1,0 +1,11 @@
+.btn {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+}
+.btn.btn-primary {
+  background-color: #465062;
+  border: none;
+  color: #fff;
+}

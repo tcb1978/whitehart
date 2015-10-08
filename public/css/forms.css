@@ -1,0 +1,28 @@
+input.form-control,
+textarea.form-control {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  border: solid 3px #465062;
+  background: transparent;
+}
+.form-control:focus {
+  border-color: #485264;
+  webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control::-webkit-input-placeholder {
+  color: #465062;
+}
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #465062;
+}
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #465062;
+}
+.form-control:-ms-input-placeholder {
+  color: #465062;
+}

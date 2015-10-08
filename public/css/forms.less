@@ -1,0 +1,29 @@
+@import (reference) "mixins";
+@import (reference) "variables";
+input.form-control, textarea.form-control{
+  .rounded-corners-all(0);
+  border: solid 3px @wh-gray;
+  background: transparent;
+}
+
+.form-control:focus{
+  border-color: @wh-gray + 2;
+  webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: @wh-gray;
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: @wh-gray;
+}
+
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+  color: @wh-gray;
+}
+
+.form-control:-ms-input-placeholder {
+  color: @wh-gray;
+}

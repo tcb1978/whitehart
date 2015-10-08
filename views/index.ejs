@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Whitehart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/lib/Swiper/dist/css/swiper.min.css">
+    <link rel='stylesheet' href='/css/style.css' />
+    <script src="jquery.slides.min.js"></script>
+  </head>
+  <body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div id="logo_slide" class="swiper-slide">
+        <div class="center">
+          <h2 class="whitehart-logo"><span class="text stags-head">WHITEHART</span></h2>
+        </div>
+      </div>
+      <div id="description_slide" class="swiper-slide">
+        <div class="center">
+          <h2 class="whitehart-logo"><span class="text">WHITEHART</span></h2>
+          <h3>A NEW APPROACH TO INVESTMENT</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi culpa dolore dolorem earum excepturi exercitationem, explicabo impedit incidunt ipsam libero minima nihil nostrum odit, porro quaerat soluta veniam.</p>
+        </div>
+      </div>
+      <div id="contact_form_slide" class="swiper-slide">
+        <div class="center">
+          <div id="mobileContactForm">
+            <h3>CONTACT US</h3>
+            <form method="post" action="/contact">
+              <div class="form-group">
+                <input type="text"
+                       name="name"
+                       id="mobileContactFormName"
+                       placeholder="Name"
+                       class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="email"
+                       class="form-control"
+                       id="mobileContactFormEmail"
+                       name="email"
+                       placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input type="text"
+                       name="number"
+                       id="mobileContactFormNumber"
+                       placeholder="Number"
+                       class="form-control">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control"
+                          id="mobileContactFormMessage"
+                          name="message"
+                          rows="3"
+                          placeholder="Comments"></textarea>
+              </div>
+              <button class="btn btn-primary pull-right" type="submit">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  </div>
+  <script src="/lib/jquery/dist/jquery.min.js"></script>
+  <script src="/lib/Swiper/dist/js/swiper.min.js"></script>
+  <script src="/js/main.js"></script>
+  </body>
+</html>
