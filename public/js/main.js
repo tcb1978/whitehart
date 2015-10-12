@@ -19,4 +19,18 @@ $(function(){
             alert('error');
         });
     }
+
+    function onDesktopFormSubmit(e){
+        e.preventDefault();
+        $.post('/contact', {
+            email : $('#mobileContactFormEmail').val(),
+            name : $('#mobileContactFormName').val(),
+            message : $("#mobileContactFormMessage").val(),
+            number : $("#mobileContactFormMessage").val()
+        }).success(function(){
+            alert('success!!!')
+        }).error(function(){
+            alert('error');
+        });
+    }
 });
