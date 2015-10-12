@@ -13,6 +13,9 @@ html, body{
   background-size: cover;
   position: relative;
   height: 100%;
+  @media (min-width: @tablet-width) {
+    background-image: url('/img/bg_large.jpg');
+  }
 }
 
 .center{
@@ -25,20 +28,35 @@ html, body{
   height: 0;
   overflow: visible;
   width: 260px;
+  @media (min-width: @tablet-width) {
+    width: 395px;
+  }
 }
 
 h2.whitehart-logo{
   text-align: center;
   margin-top: -151px;
+  @media (min-width: @tablet-width) {
+    margin-top: -225px;
+    font-size: 41px;
+  }
   span.text{
     width: 260px;
     display: inline-block;
     text-indent: -100000px;
     background: url("/img/whitehart_logo_small.png") no-repeat center center;
     background-size: contain;
+    @media (min-width: @tablet-width) {
+      background-image: url('/img/whitehart_logo_large.png');
+      width: 395px;
+    }
     &.stags-head{
       background-image: url("/img/logo_small.png");
       height: 302px;
+      @media (min-width: @tablet-width) {
+        background-image: url('/img/logo_large.png');
+        height: 450px;
+      }
     }
   }
 }
