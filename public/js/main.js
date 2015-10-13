@@ -31,7 +31,7 @@ $(function(){
 
 
     function initDesktopUI(){
-
+        $('body').addClass('desktop');
         var timer = setTimeout(function(){
             $('#logo_slide').fadeOut('slow');
         }, 500);
