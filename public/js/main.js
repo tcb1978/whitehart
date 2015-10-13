@@ -36,7 +36,7 @@ $(function(){
             email : $('#mobileContactFormEmail').val(),
             name : $('#mobileContactFormName').val(),
             message : $("#mobileContactFormMessage").val(),
-            number : $("#mobileContactFormMessage").val()
+            number : $("#mobileContactFormNumber").val()
         }).success(function(){
             alert('success!!!')
         }).error(function(){
@@ -53,14 +53,13 @@ $(function(){
             email : $('#desktopContactFormEmail').val(),
             name : $('#desktopContactFormName').val(),
             message : $("#desktopContactFormMessage").val(),
-            number : $("#desktopContactFormMessage").val()
+            number : $("#desktopContactFormNumber").val()
         }).success(function(){
             alert('success!!!')
         }).error(function(){
             alert('error');
         });
     }
-
 
     function formIsValid(formId){
         var $form = $('#' + formId),
