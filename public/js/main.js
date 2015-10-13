@@ -34,7 +34,7 @@ $(function(){
 
         var timer = setTimeout(function(){
             $('#logo_slide').fadeOut('slow');
-        }, 1000);
+        }, 500);
 
         function onDesktopFormSubmit(e){
             e.preventDefault();

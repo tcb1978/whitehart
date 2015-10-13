@@ -1,0 +1,19 @@
+
+@font-tw-cen : 'TwCenMTStd';
+@font-tw-cen-semi-bold : 'TwCenMTStd-SemiBold';
+
+.import-font(@fileName, @filePath, @fontFamily){
+  @font-face {
+    font-family: @fontFamily;
+    src: url('@{filePath}@{fileName}.eot');
+    src: url('@{filePath}@{fileName}.eot?#iefix') format('embedded-opentype'),
+    url('@{filePath}@{fileName}.woff') format('woff'),
+    url('@{filePath}@{fileName}.ttf') format('truetype'),
+    url('@{filePath}@{fileName}.svg#@{fileName}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+.import-font('TwCenMTStd-SemiBold', '/fonts/TwoCenMT-SemiBold/', @font-tw-cen-semi-bold);
+.import-font('TwCenMTStd', '/fonts/TwoCenMTStd/', @font-tw-cen);
