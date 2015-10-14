@@ -16,12 +16,12 @@ router.post('/contact', function (req, res) {
       "html": composeMessageBodyHTML(body),
       "subject": "Whitehart Contact Form Message",
       "to": [{
-        "email": "jeff@jeffskelton.net",
+        "email": process.env.CONTACT_FORM_EMAIL,
         "name": "Whitehart",
         "type": "to"
       }],
       "headers": {
-        "Reply-To": "hello@ayo.co"
+        "Reply-To": process.env.CONTACT_FORM_EMAIL
       }
     };
 
