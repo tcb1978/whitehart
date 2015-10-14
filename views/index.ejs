@@ -9,7 +9,7 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body>
-  <div class="swiper-container">
+  <div id="main" class="swiper-container">
     <div class="swiper-wrapper">
       <div id="logo_slide" class="swiper-slide">
         <div class="center">
@@ -24,7 +24,10 @@
         </div>
 
         <div id="desktopContactForm">
-
+          <div class="message-error hidden alert alert-danger">
+            <p>Sorry but an error has occurred. Please try again or
+              email us directly at <a href="mailto:info@whitehart.com">info@whitehart.com</a></p>
+          </div>
           <form class="form-inline" novalidate>
             <div class="form-group">
               <h3>CONTACT US</h3>
@@ -66,6 +69,10 @@
       <div id="contact_form_slide" class="swiper-slide">
         <div class="center">
           <div id="mobileContactForm">
+            <div class="message-error hidden alert alert-danger">
+              <p>Sorry but an error has occurred. Please try again or
+                email us directly at <a href="mailto:info@whitehart.com">info@whitehart.com</a></p>
+            </div>
             <h3>CONTACT US</h3>
             <form class="validated-form" novalidate>
               <div class="form-group">
@@ -109,7 +116,12 @@
     <div class="swiper-pagination"></div>
   </div>
 
+
+  <div id="thank_you_message" class="center">
+    <h3>THANK YOU</h3>
+    <p>Your message was sent. We will respond as soon as possible.</p>
   </div>
+
   <script src="/lib/jquery/dist/jquery.min.js"></script>
   <script src="/lib/Swiper/dist/js/swiper.min.js"></script>
   <script src="/js/main.js"></script>
