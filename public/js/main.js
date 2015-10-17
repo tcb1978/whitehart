@@ -17,13 +17,21 @@ $(function(){
 
     function initDesktopUI(){
         $('body').addClass('desktop');
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            speed : 1000,
+            paginationClickable: true,
+            direction : 'vertical',
+            effect : 'coverflow'
+        });
+
         var timer = setTimeout(function(){
-            $('#logo_slide').fadeOut('slow');
-        }, 500);
+            swiper.slideNext(null, 1000);
+        }, 2000);
 
         $('#contactUsButton').on('click', function(e){
             e.preventDefault();
-            $('#description_slide').fadeOut('slow');
+            swiper.slideNext(null, 1000);
         });
     }
 
