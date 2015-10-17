@@ -20,6 +20,11 @@ $(function(){
         var timer = setTimeout(function(){
             $('#logo_slide').fadeOut('slow');
         }, 500);
+
+        $('#contactUsButton').on('click', function(e){
+            e.preventDefault();
+            $('#description_slide').fadeOut('slow');
+        });
     }
 
     $('#desktopSubmitButton').on('click', onDesktopFormSubmit);

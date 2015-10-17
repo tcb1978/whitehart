@@ -14,7 +14,7 @@ html, body{
   background-size: cover;
   position: relative;
   height: 100%;
-  font-family: @font-helvetica-light, arial, sans-serif;
+  font-family: @font-tw-cen, arial, sans-serif;
   @media (min-width: @tablet-width) {
     background-image: url('/img/bg_large.jpg');
   }
@@ -76,34 +76,9 @@ h2.whitehart-logo{
   }
 }
 
-#desktopContactForm{
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: 20px;
-  @media (min-width: @tablet-width) {
-    width: 600px;
-  }
-  @media (min-width: @desktop-width) {
-    width: 858px;
-    .form-group{
-      margin-right: 15px;
-    }
-  }
-}
-
 #thank_you_message.center{
   display: none;
   top: -160px;
-}
-
-.desktop{
-  #description_slide{
-    @media (max-width: @desktop-width) {
-      display: none;
-    }
-  }
 }
 
 h3{
@@ -116,6 +91,7 @@ h3{
 
 p{
   font-size: 16px;
+  font-family: @font-helvetica-light, arial, sans-serif;
   @media (min-width: @desktop-width) {
     line-height: 33px;
     font-size: 25px;
@@ -124,6 +100,18 @@ p{
 
 h3, p{
   text-align: center;
+}
+
+.mobile #contactUsButtonWrapper{
+  display: none;
+}
+
+#contact_form_slide{
+  .center{
+    @media (min-width: @tablet-width) {
+      width: 300px;
+    }
+  }
 }
 
 .swiper-container {
@@ -141,11 +129,5 @@ h3, p{
   opacity: 1.0;
   &.swiper-pagination-bullet-active{
     background-color: @wh-gray;
-  }
-}
-
-.mobile{
-  #desktopContactForm{
-    display: none;
   }
 }

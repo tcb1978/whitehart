@@ -5,6 +5,12 @@
 .legend p {
   text-align: left;
   font-size: 12px;
+  line-height: 14px;
+}
+@media (min-width: 1024px) {
+  .legend p {
+    padding: 10px 0;
+  }
 }
 input.form-control,
 textarea.form-control {

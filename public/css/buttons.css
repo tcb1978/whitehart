@@ -3,6 +3,7 @@
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   -ms-border-radius: 0;
+  font-family: 'TwCenMTStd-SemiBold';
 }
 .btn.btn-primary {
   background-color: #465062;
