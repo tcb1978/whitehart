@@ -22,7 +22,8 @@ $(function(){
             speed : 1000,
             paginationClickable: true,
             direction : 'vertical',
-            effect : 'coverflow'
+            effect : 'coverflow',
+            keyboardControl : true
         });
 
         var timer = setTimeout(function(){
