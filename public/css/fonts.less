@@ -1,7 +1,7 @@
 
 @font-tw-cen : 'TwCenMTStd';
 @font-tw-cen-semi-bold : 'TwCenMTStd-SemiBold';
-
+@font-helvetica-light : 'HelveticaNeueLight';
 .import-font(@fileName, @filePath, @fontFamily){
   @font-face {
     font-family: @fontFamily;
@@ -15,5 +15,6 @@
   }
 }
 
+.import-font('HelveticaNeueLight', '/fonts/HelveticaNeueLight/', @font-helvetica-light);
 .import-font('TwCenMTStd-SemiBold', '/fonts/TwoCenMT-SemiBold/', @font-tw-cen-semi-bold);
 .import-font('TwCenMTStd', '/fonts/TwoCenMTStd/', @font-tw-cen);
