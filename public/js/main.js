@@ -19,7 +19,7 @@ $(function(){
         $('body').addClass('desktop');
         var timer = setTimeout(function(){
             $('#logo_slide').fadeOut('slow');
-        }, 5000);
+        }, 500);
     }
 
     $('#desktopSubmitButton').on('click', onDesktopFormSubmit);

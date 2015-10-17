@@ -1,5 +1,18 @@
 @import (reference) "mixins";
 @import (reference) "variables";
+@import (reference) "fonts";
+
+.legend{
+  h3{
+    border-bottom: solid 2px @wh-gray;
+    font-size: 33px;
+  }
+  p{
+    text-align: left;
+    font-size: 12px;
+  }
+}
+
 input.form-control, textarea.form-control{
   .rounded-corners-all(0);
   border: solid 2px @wh-gray;

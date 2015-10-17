@@ -1,3 +1,11 @@
+.legend h3 {
+  border-bottom: solid 2px #465062;
+  font-size: 33px;
+}
+.legend p {
+  text-align: left;
+  font-size: 12px;
+}
 input.form-control,
 textarea.form-control {
   border-radius: 0;
