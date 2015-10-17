@@ -14,7 +14,7 @@ html, body{
   background-size: cover;
   position: relative;
   height: 100%;
-  font-family: @font-helvetica-light;
+  font-family: @font-helvetica-light, arial, sans-serif;
   @media (min-width: @tablet-width) {
     background-image: url('/img/bg_large.jpg');
   }
@@ -109,20 +109,21 @@ h2.whitehart-logo{
 h3{
   font-size: 25px;
   font-family: @font-tw-cen-semi-bold;
+  @media (min-width: @desktop-width){
+    font-size: 30px;
+  }
 }
 
 p{
-  font-size: 18px;
+  font-size: 16px;
   @media (min-width: @desktop-width) {
     line-height: 33px;
+    font-size: 25px;
   }
 }
 
 h3, p{
   text-align: center;
-  @media (min-width: @desktop-width){
-    font-size: 30px;
-  }
 }
 
 .swiper-container {

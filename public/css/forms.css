@@ -4,7 +4,7 @@ textarea.form-control {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   -ms-border-radius: 0;
-  border: solid 3px #465062;
+  border: solid 2px #465062;
   background: transparent;
 }
 .form-control:focus {
