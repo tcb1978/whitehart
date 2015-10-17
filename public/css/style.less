@@ -48,15 +48,20 @@ h2.whitehart-logo{
   @media (min-width: @desktop-width) {
     font-size: 55px;
   }
-  span.text{
+  span{
     width: 260px;
     display: inline-block;
     text-indent: -100000px;
-    background: url("/img/whitehart_logo_small.png") no-repeat center center;
+    background:transparent none no-repeat center center;
     background-size: contain;
     @media (min-width: @tablet-width) {
-      background-image: url('/img/whitehart_logo_large.png');
       width: 395px;
+    }
+    &.text{
+      background-image: url("/img/whitehart_logo_small.png");
+      @media (min-width: @tablet-width) {
+        background-image: url('/img/whitehart_logo_large.png');
+      }
     }
     &.stags-head{
       background-image: url("/img/logo_small.png");
