@@ -39,9 +39,9 @@ router.post('/contact', function (req, res) {
   function composeMessageBodyHTML(body) {
     var html = '<div style="font-family:Arial">';
     html += 'Name : ' + body.name  + '<br><br>';
-    html += 'Phone Number : ' + body.number || '(no number)' + '<br><br>';
+    html += 'Phone Number : ' + (body.number || '(no number)') + '<br><br>';
     html += 'Email : ' + body.email + '<br><br>';
-    html += 'Message: ' + body.message || '(no message)' + '<br><br>';
+    html += 'Message: ' + (body.message || '(no message)') + '<br><br>';
     html += '</div>';
     return html;
   }
