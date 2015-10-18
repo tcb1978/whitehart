@@ -23,7 +23,8 @@ $(function(){
             paginationClickable: true,
             direction : 'vertical',
             effect : 'coverflow',
-            keyboardControl : true
+            scrollbarDraggable: false,
+            scrollbarHide : true
         });
 
         var timer = setTimeout(function(){
