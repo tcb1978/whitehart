@@ -18,7 +18,7 @@ $(function(){
     function initDesktopUI(){
         $('body').addClass('desktop');
         var swiper = new Swiper('.swiper-container', {
-            //pagination: '.swiper-pagination',
+            pagination: '.swiper-pagination',
             speed : 1000,
             paginationClickable: true,
             direction : 'vertical',
