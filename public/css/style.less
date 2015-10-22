@@ -34,7 +34,7 @@ html, body{
     width: 600px;
   }
   @media (min-width: @desktop-width) {
-    width: 900px;
+    width: 700px;
   }
 }
 
@@ -90,11 +90,16 @@ h2.whitehart-logo{
 }
 
 h3{
-  font-size: 25px;
-  font-family: @font-tw-cen-semi-bold;
-  @media (min-width: @desktop-width){
-    font-size: 30px;
+  font-size: 13px;
+  font-family: @font-helvetica-light;
+  margin-top: 0;
+  @media (min-width: @tablet-width){
+    font-size: 20px;
   }
+}
+
+.mobile #description_slide h3{
+  margin: 20px 0;
 }
 
 p{
@@ -105,7 +110,6 @@ p{
   }
   @media (min-width: @desktop-width) {
     line-height: 36px;
-    font-size: 20px;
   }
 }
 

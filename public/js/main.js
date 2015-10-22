@@ -1,5 +1,5 @@
 $(function(){
-
+    var swiper = null;
     if(isMobile()){
         initMobileUI();
     }else{
@@ -7,7 +7,7 @@ $(function(){
     }
 
     function initMobileUI(){
-        var swiper = new Swiper('.swiper-container', {
+        swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             paginationClickable: true
         });
@@ -17,7 +17,7 @@ $(function(){
 
     function initDesktopUI(){
         $('body').addClass('desktop');
-        var swiper = new Swiper('.swiper-container', {
+         swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             speed : 1000,
             paginationClickable: true,
@@ -117,6 +117,11 @@ $(function(){
     function onMessageSent(){
         $('#thank_you_message').fadeIn('slow');
         $('#main').fadeOut('slow');
+        setTimeout(function(){
+            swiper.slidePrev();
+            $('#thank_you_message').fadeOut('slow');
+            $('#main').fadeIn('slow');
+        }, 2000)
     }
 
     function onMessageError(){

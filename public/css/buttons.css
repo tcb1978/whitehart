@@ -3,7 +3,8 @@
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   -ms-border-radius: 0;
-  font-family: 'TwCenMTStd-SemiBold';
+  font-family: 'HelveticaNeueLight';
+  letter-spacing: 1px;
 }
 .btn.btn-primary {
   background-color: #465062;
