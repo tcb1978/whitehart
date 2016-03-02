@@ -45,6 +45,7 @@ $(function(){
         if(!formIsValid('mobileContactForm')){
             return;
         }
+        displayContactFormSendingUI();
         $.post('/contact', {
             email : $('#mobileContactFormEmail').val(),
             name : $('#mobileContactFormName').val(),
@@ -59,6 +60,7 @@ $(function(){
         if(!formIsValid('desktopContactForm')){
             return;
         }
+        displayContactFormSendingUI();
         $.post('/contact', {
             email : $('#desktopContactFormEmail').val(),
             name : $('#desktopContactFormName').val(),
@@ -66,6 +68,10 @@ $(function(){
             number : $("#desktopContactFormNumber").val()
         }).success(onMessageSent)
           .error(onMessageError);
+    }
+
+    function displayContactFormSendingUI(){
+        $('#main').fadeOut('fast');
     }
 
     function formIsValid(formId){
@@ -126,6 +132,7 @@ $(function(){
 
     function onMessageError(){
         $('.message-error').removeClass('hidden').show();
+        $('#main').fadeIn('fast');
         setTimeout(function(){
             $('.message-error').fadeOut('slow');
         }, 3000)

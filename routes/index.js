@@ -1,39 +1,41 @@
 var express = require('express');
 var router = express.Router();
+var api_key = process.env.MAILGUN_API_KEY;
+var domain = process.env.MAILGUN_DOMAIN;
+var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+var mailcomposer = require('mailcomposer');
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', {title: 'Express'});
 });
 
-router.post('/contact', function (req, res) {
-  var mandrill = require('mandrill-api/mandrill'),
-    body = req.body,
-    mandrill_client = new mandrill.Mandrill(process.env.MANDRILL_API_KEY),
-    message = {
-      "from_name": body.name,
-      "from_email": body.email,
-      "html": composeMessageBodyHTML(body),
-      "subject": "Whitehart Contact Form Message",
-      "to": [{
-        "email": process.env.CONTACT_FORM_EMAIL,
-        "name": "Whitehart",
-        "type": "to"
-      }],
-      "headers": {
-        "Reply-To": process.env.CONTACT_FORM_EMAIL
-      }
-    };
 
-  mandrill_client.messages.send({"message": message}, function (result) {
-    console.log(result);
-    var messageSent = result[0].status === 'sent';
-    if (!messageSent) {
-      return res.status(500).send(result[0].reject_reason || 'message send error');
+router.post('/contact', function (req, res) {
+  var body = req.body;
+
+  var mail = mailcomposer({
+    from: body.name + '<' + body.email + '>',
+    to: process.env.CONTACT_FORM_EMAIL,
+    subject: "Whitehart Contact Form Message",
+    html: composeMessageBodyHTML(body)
+  });
+
+  mail.build(function (err, message){
+    if(err) {
+      return res.status(500).send(err);
     }
-    return res.send({success: true});
-  }, function (err) {
-    return res.status(500).send(err);
+    mailgun.messages().sendMime({
+      to : process.env.CONTACT_FORM_EMAIL,
+      message : message.toString('ascii')
+    }, function (err, body) {
+      if(err) {
+        return res.status(500).send(err);
+      }
+      console.log(body);
+      return res.send({success: true});
+    });
   });
 
   function composeMessageBodyHTML(body) {
@@ -45,7 +47,6 @@ router.post('/contact', function (req, res) {
     html += '</div>';
     return html;
   }
-
 });
 
 module.exports = router;

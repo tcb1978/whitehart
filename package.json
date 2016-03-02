@@ -12,7 +12,8 @@
     "ejs": "~2.3.3",
     "express": "~4.13.1",
     "less-middleware": "1.0.x",
-    "mandrill-api": "^1.0.45",
+    "mailcomposer": "^3.6.3",
+    "mailgun-js": "^0.7.7",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
   }
